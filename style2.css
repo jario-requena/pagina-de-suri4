@@ -1,0 +1,245 @@
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: cursive;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.4;
+    padding-top: 80px;
+}
+
+/* Nav */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(34, 34, 34, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav .imagen {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+nav a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Título */
+h1, h2, h3, h4 {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ffff,/*para simular un color azul neon*/
+                 0 0 15px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 60px #00ffff,
+                 0 0 100px #55ecec;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 50px 0;
+    text-shadow: 0 0 10px #00ffff,/*para simular un color azul neon*/
+                 0 0 15px #00ffff,
+                 0 0 30px #00ffff,
+                 0 0 60px #00ffff,
+                 0 0 100px #55ecec;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+section {
+    padding: 100px;
+    margin-top: 50px;
+    height: auto;
+  }
+
+/* Degradado mejorado para cada sección */
+#section1 {
+    background: linear-gradient(to bottom, #FFADAD, #FF8989, #FF7070, #FF5656); /* Rosa pastel */
+}
+
+#section2 {
+    background: linear-gradient(to bottom, #FFD6A5, #FFC085, #FFA573, #FF8A5B); /* Naranja melocotón */
+}
+
+#section3 {
+    background: linear-gradient(to bottom, #FDFFB6, #E8F597, #D4EC7D, #C0E366); /* Amarillo suave */
+}
+
+#section4 {
+    background: linear-gradient(to bottom, #CAFFBF, #A8EAA1, #8CD688, #6FC26D); /* Verde menta claro */
+}
+
+#section5 {
+    background: linear-gradient(to bottom, #9BF6FF, #73E8FF, #53D4F2, #35C1E0); /* Azul cielo */
+}
+
+#section6, #section7 {
+    background: linear-gradient(to bottom, #A0C4FF, #7FA8F0, #5F8CDF, #3F6FCF); /* Azul lavanda */
+}
+
+
+/*par darles estilos a las clases que estan dentro de de la clase "informacion"*/
+.tema-principal, .nuevo-metodo, .caracteristicas, .retos, .herramientas, .tipos_educacion, .sincronica, .asincronica, .mixta, .autoguiada, .en_vivo {
+    background: #f0f8ff;/*fondo de color blanco*/
+    color: #000;/*color de la letra*/
+    margin: 20px 0;/*un margen en los costados de la pagina web*/
+    padding: 20px;/*margen imaginario de 20pixeles*/
+    border-radius: 10px;/*para quitarle los bordes y no se vea tan afilados las esquinas de los contenedores*/
+    box-shadow: 0 0 5px #00ffff,/*color alrededor de los contenedores*/
+                0 0 10px #00ffff,
+                0 0 20px #00ffff,
+                0 0 40px #00ffff; 
+    animation: glowing-effect 2s infinite; /* Aplica la animación en un lapso de tiempo infinito */
+}
+
+/* Animación del efecto de luz para que de la inpresion de que se enciende y se apaga la luz*/
+@keyframes glowing-effect {
+    0% {
+        box-shadow: 0 0 5px #00ffff, 
+                    0 0 10px #00ffff, 
+                    0 0 20px #00ffff, 
+                    0 0 40px #00ffff; 
+    }
+    50% {
+        box-shadow: 0 0 15px #00ffff, 
+                    0 0 30px #00ffff, 
+                    0 0 60px #00ffff, 
+                    0 0 80px #00ffff; 
+    }
+    100% {
+        box-shadow: 0 0 5px #00ffff, 
+                    0 0 10px #00ffff, 
+                    0 0 20px #00ffff, 
+                    0 0 40px #00ffff; 
+    }
+}
+
+
+html {
+    scroll-behavior: smooth; /*para que cuando se presione algun hipervinculo hacer que baje de una forma mas agradable*/
+  }
+
+
+/* Información */
+.informacion {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.tema-principal, .nuevo-metodo, .caracteristicas, .retos, .herramientas, .tipos_educacion,
+.sincronica, .asincronica, .mixta, .autoguiada, .en_vivo {
+    background: #f0f8ff;
+    color: #000;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #00ffff;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(34, 34, 34, 0.8);
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+footer .pie-pagina {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer img {
+    max-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .informacion {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .menu {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    footer img {
+        max-width: 60px;
+        height: 60px;
+    }
+}
