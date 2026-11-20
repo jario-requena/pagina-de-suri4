@@ -20,7 +20,18 @@ const navItems = [
         <img src={data.marca.logo} alt={`Logo de ${data.marca.nombre}`} />
         <span>{data.marca.nombre}</span>
       </a>
-      <ul class="links">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu-links"
+        aria-label="Abrir menú"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="links" id="menu-links">
         {navItems.map((item) => (
           <li><a href={item.href}>{item.label}</a></li>
         ))}
@@ -77,7 +88,7 @@ const navItems = [
     <section class="block" id="retos">
       <div class="wrap">
         <h2>{data.retos.titulo}</h2>
-        <div class="cards">
+        <div class="cards cols-3">
           {data.retos.items.map((item) => (
             <article class="card alerta">
               <h3>{item.titulo}</h3>
@@ -147,4 +158,23 @@ const navItems = [
       <p class="copy">© {year} {data.marca.nombre}. Derechos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+    const menu = document.getElementById('menu-links');
+
+    const setOpen = (open: boolean) => {
+      toggle?.setAttribute('aria-expanded', String(open));
+      toggle?.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      menu?.classList.toggle('open', open);
+    };
+
+    toggle?.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    menu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+  </script>
 </Base>

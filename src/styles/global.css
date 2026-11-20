@@ -101,11 +101,16 @@ p {
 }
 
 .topnav .wrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   min-height: 64px;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .brand {
@@ -217,10 +222,19 @@ p {
 
 /* Tarjetas */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin-top: 40px;
+}
+
+.cards > .card {
+  flex: 0 0 calc((100% - 60px) / 4);
+}
+
+.cards.cols-3 > .card {
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .card {
@@ -358,6 +372,13 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1000px) {
+  .cards > .card,
+  .cards.cols-3 > .card {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
+
 @media (max-width: 860px) {
   .hero .wrap,
   .two-col {
@@ -367,17 +388,71 @@ footer {
   .hero-img img {
     max-width: 260px;
   }
+
+  /* Menú hamburguesa */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ink);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px 24px 20px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 32px rgba(20, 22, 43, 0.08);
+    overflow: visible;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links a {
+    display: block;
+    padding: 12px 14px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 720px) {
-  .topnav .wrap {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 6px;
-    padding-top: 10px;
-    padding-bottom: 8px;
-  }
-
   .hero {
     padding: 48px 0;
   }
@@ -385,6 +460,13 @@ footer {
   .block,
   .conclusion {
     padding: 64px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .cards > .card,
+  .cards.cols-3 > .card {
+    flex-basis: 100%;
   }
 }
 
