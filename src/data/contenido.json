@@ -1,0 +1,72 @@
+{
+  "marca": {
+    "nombre": "Pedagogías Digitales",
+    "logo": "/img/logo.jpeg"
+  },
+  "portada": {
+    "titulo": "Pedagogías Digitales",
+    "texto": "La pedagogía digital es el estudio y uso de las tecnologías digitales para el aprendizaje y la enseñanza. Implica la integración de recursos humanos, tecnológicos y materiales para el aprendizaje de competencias y conocimientos, ya sea de forma presencial o a distancia.",
+    "imagen": ""
+  },
+  "metodologia": {
+    "titulo": "Un Nuevo Método de Enseñanza",
+    "texto": "La pedagogía digital ha transformado los métodos de enseñanza-aprendizaje y ha modificado el papel del docente. Entre sus beneficios se encuentran:",
+    "beneficios": [
+      "Facilitar la interacción y cooperación entre alumnos, docentes y familias.",
+      "Extender los entornos de aprendizaje a otros espacios, como el hogar o los espacios de formación corporativa."
+    ],
+    "texto2": "La pedagogía digital no se aplica en todos los establecimientos. Aunque la aparición del e-learning y la creación de universidades digitales hace cerca de 10 años hayan anunciado las transformaciones que vive actualmente la enseñanza superior, la transición digital de la enseñanza se ha acelerado estos últimos años."
+  },
+  "caracteristicas": {
+    "titulo": "Características Principales de las Pedagogías Digitales",
+    "items": [
+      { "titulo": "Interactividad", "texto": "Comunicación bidireccional entre estudiantes y docentes a través de foros, videollamadas, y chats." },
+      { "titulo": "Accesibilidad y flexibilidad", "texto": "Permiten el acceso a recursos desde cualquier lugar y en cualquier momento." },
+      { "titulo": "Personalización", "texto": "Adaptación de contenidos y metodologías según las necesidades del estudiante." },
+      { "titulo": "Multimodalidad", "texto": "Uso de recursos visuales, auditivos y táctiles." },
+      { "titulo": "Evaluación continua", "texto": "Sistemas automatizados para seguimiento constante." }
+    ]
+  },
+  "retos": {
+    "titulo": "Retos",
+    "items": [
+      { "titulo": "Brecha digital", "texto": "No todos tienen acceso a dispositivos o internet de calidad." },
+      { "titulo": "Capacitación docente", "texto": "Los educadores deben adquirir competencias tecnológicas." },
+      { "titulo": "Distracción", "texto": "Las tecnologías pueden desviar la atención del propósito educativo." }
+    ]
+  },
+  "herramientas": {
+    "titulo": "Ejemplos de Herramientas en Pedagogías Digitales",
+    "items": [
+      { "titulo": "Plataformas de aprendizaje", "texto": "Moodle, Google Classroom, Edmodo." },
+      { "titulo": "Apps educativas", "texto": "Kahoot!, Duolingo, Quizlet." },
+      { "titulo": "Recursos multimedia", "texto": "Videos interactivos, podcasts, simulaciones virtuales." },
+      { "titulo": "Inteligencia artificial", "texto": "Chatbots educativos, plataformas adaptativas." }
+    ]
+  },
+  "educacion_virtual": {
+    "titulo": "La educación virtual",
+    "texto": "La educación virtual es un modelo de enseñanza y aprendizaje que se realiza a través de plataformas digitales, utilizando internet como medio principal. Permite a los estudiantes y profesores interactuar desde cualquier lugar, rompiendo barreras geográficas y de tiempo.",
+    "tipos_titulo": "Tipos de educación virtual",
+    "tipos_texto": "Los tipos de educación virtual son las diferentes modalidades en las que se organiza el proceso de enseñanza y aprendizaje en entornos digitales. Estas modalidades varían según la interacción, el tiempo y la flexibilidad, e incluyen enfoques síncronos, asíncronos, mixtos, autoguiados y en vivo, permitiendo adaptarse a las necesidades y estilos de aprendizaje de los estudiantes.",
+    "tipos": [
+      { "id": "sincronica", "titulo": "Síncrona", "texto": "Ocurre en tiempo real, donde estudiantes y docentes interactúan simultáneamente a través de videoconferencias, chats o transmisiones en vivo. Ejemplo: clases en Zoom.", "imagen": "" },
+      { "id": "asincronica", "titulo": "Asíncrona", "texto": "Los estudiantes acceden al contenido educativo (videos, lecturas, foros, tareas) en el momento que prefieran, sin la necesidad de estar conectados al mismo tiempo que el docente. Ejemplo: cursos en Moodle o Coursera.", "imagen": "" },
+      { "id": "mixta", "titulo": "Mixta (Blended learning)", "texto": "Combina elementos de la educación presencial con actividades en línea. Los estudiantes alternan entre sesiones presenciales y virtuales. Ejemplo: talleres presenciales complementados con módulos en línea.", "imagen": "" },
+      { "id": "autoguiada", "titulo": "Autoguiada", "texto": "Los estudiantes avanzan a su propio ritmo, explorando contenidos diseñados específicamente para el aprendizaje independiente. Ejemplo: programas de autoaprendizaje como Khan Academy.", "imagen": "" },
+      { "id": "en-vivo", "titulo": "Educación en vivo", "texto": "Se centra en transmitir clases o eventos educativos en tiempo real, permitiendo a los estudiantes seguir las sesiones en directo.", "imagen": "" }
+    ]
+  },
+  "conclusion": {
+    "titulo": "Conclusión",
+    "texto": "Las pedagogías digitales promueven la alfabetización digital en estudiantes y docentes, permitiendo a ambas partes adaptarse a las demandas del mundo contemporáneo. Además, facilitan el aprendizaje autónomo y colaborativo mediante recursos tecnológicos dinámicos y gamificados."
+  },
+  "integrantes": {
+    "titulo": "Integrantes",
+    "lista": [
+      "Suri Maria Taques Segura",
+      "Elida Isabel Sabalza Perez",
+      "Bianca Alexandra Villanueva Mercado"
+    ]
+  }
+}

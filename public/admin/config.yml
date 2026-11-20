@@ -1,0 +1,112 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "sitio"
+    label: "Contenido del sitio"
+    delete: false
+    files:
+      - name: "contenido"
+        label: "Textos e imágenes"
+        file: "src/data/contenido.json"
+        fields:
+          - label: "Marca"
+            name: "marca"
+            widget: "object"
+            fields:
+              - { label: "Nombre del sitio", name: "nombre", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image" }
+
+          - label: "Portada"
+            name: "portada"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Imagen (si está vacía se usa el logo)", name: "imagen", widget: "image", required: false }
+
+          - label: "Nuevas metodologías"
+            name: "metodologia"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto introductorio", name: "texto", widget: "text" }
+              - label: "Beneficios"
+                name: "beneficios"
+                widget: "list"
+                field: { label: "Beneficio", name: "beneficio", widget: "string" }
+              - { label: "Texto final", name: "texto2", widget: "text" }
+
+          - label: "Características"
+            name: "caracteristicas"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Características"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nombre", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "texto", widget: "text" }
+
+          - label: "Retos"
+            name: "retos"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Retos"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nombre", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "texto", widget: "text" }
+
+          - label: "Herramientas"
+            name: "herramientas"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Herramientas"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Categoría", name: "titulo", widget: "string" }
+                  - { label: "Ejemplos", name: "texto", widget: "string" }
+
+          - label: "Educación virtual"
+            name: "educacion_virtual"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Título de los tipos", name: "tipos_titulo", widget: "string" }
+              - { label: "Texto de los tipos", name: "tipos_texto", widget: "text" }
+              - label: "Tipos de educación"
+                name: "tipos"
+                widget: "list"
+                fields:
+                  - { label: "Identificador (sin espacios, ej. sincronica)", name: "id", widget: "string" }
+                  - { label: "Nombre", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "texto", widget: "text" }
+                  - { label: "Imagen (opcional)", name: "imagen", widget: "image", required: false }
+
+          - label: "Conclusión"
+            name: "conclusion"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Texto", name: "texto", widget: "text" }
+
+          - label: "Integrantes"
+            name: "integrantes"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - label: "Nombres"
+                name: "lista"
+                widget: "list"
+                field: { label: "Nombre", name: "nombre", widget: "string" }
