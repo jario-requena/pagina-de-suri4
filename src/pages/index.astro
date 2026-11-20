@@ -1,0 +1,150 @@
+---
+import Base from '../layouts/Base.astro';
+import data from '../data/contenido.json';
+
+const year = new Date().getFullYear();
+
+const navItems = [
+  { href: '#tema-principal', label: 'Tema principal' },
+  { href: '#nuevo-metodo', label: 'Nuevas metodologías' },
+  { href: '#caracteristicas', label: 'Características' },
+  { href: '#retos', label: 'Retos' },
+  { href: '#herramientas', label: 'Herramientas' },
+  { href: '#tipos_educacion', label: 'Tipos de educación' },
+];
+---
+<Base title={data.marca.nombre}>
+  <nav class="topnav" aria-label="Navegación principal">
+    <div class="wrap">
+      <a href="#tema-principal" class="brand">
+        <img src={data.marca.logo} alt={`Logo de ${data.marca.nombre}`} />
+        <span>{data.marca.nombre}</span>
+      </a>
+      <ul class="links">
+        {navItems.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero" id="tema-principal">
+      <div class="wrap">
+        <div>
+          <h1>{data.portada.titulo}</h1>
+          <p class="lead">{data.portada.texto}</p>
+        </div>
+        <figure class="hero-img">
+          <img
+            src={data.portada.imagen || data.marca.logo}
+            alt={`Ilustración de ${data.marca.nombre}`}
+          />
+        </figure>
+      </div>
+    </header>
+
+    <section class="block" id="nuevo-metodo">
+      <div class="wrap two-col">
+        <div>
+          <h2>{data.metodologia.titulo}</h2>
+          <p>{data.metodologia.texto}</p>
+          <ul class="checks">
+            {data.metodologia.beneficios.map((b) => <li>{b}</li>)}
+          </ul>
+        </div>
+        <div>
+          <p>{data.metodologia.texto2}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block tint" id="caracteristicas">
+      <div class="wrap">
+        <h2>{data.caracteristicas.titulo}</h2>
+        <div class="cards">
+          {data.caracteristicas.items.map((item, i) => (
+            <article class="card">
+              <span class="num">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="retos">
+      <div class="wrap">
+        <h2>{data.retos.titulo}</h2>
+        <div class="cards">
+          {data.retos.items.map((item) => (
+            <article class="card alerta">
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="block tint" id="herramientas">
+      <div class="wrap">
+        <h2>{data.herramientas.titulo}</h2>
+        <div class="cards">
+          {data.herramientas.items.map((item) => (
+            <article class="card herramienta">
+              <h3>{item.titulo}</h3>
+              <p>{item.texto}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="tipos_educacion">
+      <div class="wrap">
+        <h2>{data.educacion_virtual.titulo}</h2>
+        <p class="lead">{data.educacion_virtual.texto}</p>
+
+        <h2 class="subtitulo">{data.educacion_virtual.tipos_titulo}</h2>
+        <p class="lead">{data.educacion_virtual.tipos_texto}</p>
+
+        <div class="cards tipos">
+          {data.educacion_virtual.tipos.map((tipo) => (
+            <article class="card" id={tipo.id}>
+              {tipo.imagen && <img src={tipo.imagen} alt={tipo.titulo} />}
+              <h3>{tipo.titulo}</h3>
+              <p>{tipo.texto}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <div class="wrap">
+        <h2>{data.conclusion.titulo}</h2>
+        <p>{data.conclusion.texto}</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <a href="#tema-principal" class="brand">
+          <img src={data.marca.logo} alt={`Logo de ${data.marca.nombre}`} />
+          <span>{data.marca.nombre}</span>
+        </a>
+        <div>
+          <h3>{data.integrantes.titulo}</h3>
+          <ul>
+            {data.integrantes.lista.map((nombre) => <li>{nombre}</li>)}
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© {year} {data.marca.nombre}. Derechos reservados.</p>
+    </div>
+  </footer>
+</Base>
